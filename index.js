@@ -7,7 +7,7 @@ app.get('/', (req, res) => res.sendFile(`${__dirname}/index.html`));
 app.get('/video', (req, res) => {
     const { range } = req.headers;
     if (!range) {
-        res.status(400).send('Requires Range header');
+        res.status(400).send('Requires Range Header');
     }
 
     const path = 'bigbuck.mp4';
