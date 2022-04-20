@@ -36,3 +36,13 @@ Response Headers {
 The webpage will recognise that this is an incomplete video, and the video element will only play what it has 'downloaded' so far.
 
 As the video continues to play, the next 'chunk' is requested and the cycle continues...
+
+## Concluding thoughts
+While a pretty simple implementation, taking literally 10 minutes to set up, this is not the best way to implement this.
+
+Simple file stream & return back to the client. 
+Small payloads, super fast for most users.
+
+Scrubbing through the video does not however, save the content to the front end, or anywhere for that matter. 
+
+This means that we are essentially sending & receiving more data than the file content itself. A simple 64MB file can be 'streamed' to 100+ MB by just scrubbing through the video. 
