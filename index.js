@@ -1,10 +1,8 @@
 const express = require('express');
-const app = express();
 const fs = require('fs');
+const app = express();
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-});
+app.get('/', (req, res) => res.sendFile(`${__dirname}/index.html`));
 
 app.get('/video', (req, res) => {
     const { range } = req.headers;
@@ -34,6 +32,4 @@ app.get('/video', (req, res) => {
     videoStream.pipe(res);
 });
 
-app.listen(8000, () => {
-    console.log('Listening on port 8000');
-});
+app.listen(8000, () => console.log('Listening on port 8000'));

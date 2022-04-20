@@ -2,6 +2,9 @@
 
 Basic example of a video streaming service.
 
+```
+git clone git@github.com:krynv/video-streaming.git && npm i && npm start
+```
 
 ## The general gist of this
 Browser -> Node JS server
