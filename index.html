@@ -2,22 +2,36 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Video Streaming</title>
 	<style>
 		body {
-			margin: 40px;
+			margin: 40px auto;
 			max-width: 650px;
-			background-color: #444;
+			line-height: 1.6;
+			font-size: 18px;
+			font-family: "Courier New", Courier, monospace;
+			color: rgb(232, 232, 232);
+			background-color: black;
+			padding: 0 10px;
+		}
+
+		h2 {
+			line-height: 1.2;
 		}
 	</style>
 </head>
 
 <body>
-	<video id="video" width="650" controls muted="muted" autoplay>
-		<source src="/video" type="video/mp4">
-		Your browser does not support the video tag.
+	<h2>Video Streaming via the HTML5 video tag</h2>
+	<p>This video is is being streamed instead of automatically downloaded.</p>
+	<p>
+		You can scrub through the video and check the network tab to see it being streamed.
+		Pretty neat, I know...
+	</p>
+	<video id="videoPlayer" width="650" controls muted="muted" autoplay>
+		<source src="/video" type="video/mp4" />
 	</video>
 </body>
 
